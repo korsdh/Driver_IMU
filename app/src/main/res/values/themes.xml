@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      AppCompatActivity와 호환되는 올바른 기본 애플리케이션 테마입니다.
+      'parent' 속성을 Theme.Material3.DayNight.NoActionBar로 변경했습니다.
+    -->
+    <style name="Theme.Driver_IMU" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 여기에 앱의 색상 등 원하는 스타일을 맞춤 설정할 수 있습니다. -->
+    </style>
+</resources>

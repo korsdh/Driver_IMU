@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F0F4F8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자이로스코프 센서 값"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        android:padding="16dp"
+        android:background="@drawable/card_background"> <!-- card_background.xml 필요 -->
+
+        <!-- X-axis Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X축 각속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <!-- X-axis Value -->
+        <TextView
+            android:id="@+id/textViewX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 rad/s"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+
+        <!-- Y-axis Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y축 각속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <!-- Y-axis Value -->
+        <TextView
+            android:id="@+id/textViewY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 rad/s"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+
+        <!-- Z-axis Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z축 각속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <!-- Z-axis Value -->
+        <TextView
+            android:id="@+id/textViewZ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 rad/s"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+
+        <!-- Timestamp Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마지막 업데이트:"
+            android:textSize="16sp"
+            android:textColor="#777777"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="start|center_vertical"/>
+
+        <!-- Timestamp Value -->
+        <TextView
+            android:id="@+id/textViewTimestamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="00:00:00"
+            android:textSize="16sp"
+            android:textColor="#777777"
+            android:textStyle="italic"
+            android:gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+    </GridLayout>
+
+</LinearLayout>
