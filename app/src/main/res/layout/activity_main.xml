@@ -119,4 +119,91 @@
             android:layout_gravity="fill_horizontal|center_vertical"/>
     </GridLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가속도계 센서 값"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:padding="16dp"
+        android:background="@drawable/card_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X축 가속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <TextView
+            android:id="@+id/textViewAccX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 m/s²"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y축 가속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <TextView
+            android:id="@+id/textViewAccY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 m/s²"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z축 가속도:"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_gravity="start|center_vertical"/>
+
+        <TextView
+            android:id="@+id/textViewAccZ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0.00 m/s²"
+            android:textSize="20sp"
+            android:textColor="#007AFF"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_gravity="fill_horizontal|center_vertical"/>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="측정시작"
+        android:layout_marginTop="24dp"/>
+
 </LinearLayout>
