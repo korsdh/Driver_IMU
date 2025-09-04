@@ -5,6 +5,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.media.MediaScannerConnection
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -237,6 +238,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         Toast.makeText(this, "측정을 종료했습니다.", Toast.LENGTH_SHORT).show()
         val savedPath = currentFile?.absolutePath ?: "Unknown directory"
 //        Toast.makeText(this ,"$savedPath \n 에 저장되었습니다!", Toast.LENGTH_SHORT).show()
+        if (savedPath != null){
+            MediaScannerConnection.scanFile(this, arrayOf(savedPath), null){ path, uri ->
+                Log.i("ExternalStorage", "Scanned $path:")
+                Log.i("ExternalStorage", "-> uri=$uri")
+
+            }
+        }
         AlertDialog.Builder(this)
             .setTitle("저장 완료")
             .setMessage(savedPath)
